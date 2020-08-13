@@ -1,0 +1,17 @@
+{
+    "name": "inventory-connector",
+    "config": {
+        "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+        "database.hostname": "<enter the name>.postgres.database.azure.com",
+        "database.port": "5432",
+        "database.user": "<admin>@<name>",
+        "database.password": "<enter the password>",
+        "database.dbname": "postgres",
+        "database.server.name": "myserver",
+        "database.sslmode": "require",
+        "plugin.name": "pgoutput",
+        "table.whitelist": "public.inventory",
+        "publication.name": "mytestpub",
+        "publication.autocreate.mode": "filtered"
+    }
+}
